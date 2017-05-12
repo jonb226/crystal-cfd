@@ -1,0 +1,22 @@
+#!/usr/bin/ruby
+
+class CrystalHelper
+
+  def run_in_docker(command)
+    puts `docker run -it -v $PWD:/crystal crystallang/crystal bash -c "export CRYSTAL_PATH=/crystal/src:lib:/opt/crystal/src && cd /crystal && #{command}"`
+  end
+
+  def perform(args)
+    case args.first
+    when "shards"
+      run_in_docker "shards #{args[1..-1].join(' ')}"
+    when "spec"
+      run_in_docker "crystal spec #{args[1..-1].join(' ')} --verbose"
+    else
+      run_in_docker "#{args.join(' ')}"
+    end
+  end
+
+end
+
+CrystalHelper.new.perform(ARGV)
