@@ -3,7 +3,7 @@
 class CrystalHelper
 
   def run_in_docker(command)
-    puts `docker run -it -v $PWD:/crystal crystallang/crystal bash -c "export CRYSTAL_PATH=/crystal/src:lib:/opt/crystal/src && cd /crystal && #{command}"`
+    puts `docker run -it -v $PWD:/crystal crystal-lapack bash -c "export CRYSTAL_PATH=/crystal/src:lib:/opt/crystal/src && cd /crystal && #{command}"`
   end
 
   def perform(args)

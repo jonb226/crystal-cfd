@@ -1,6 +1,22 @@
 version: 1.0
 shards:
+  crystalla:
+    github: mverzilli/crystalla
+    commit: 5fbd36f06d18b55fea0416913be0a899b7c6cbd1
+
+  kemal:
+    github: kemalcr/kemal
+    commit: 0724e07c22513790fbeefeca3bf8e1a8407d44b2
+
+  kilt:
+    github: jeromegn/kilt
+    version: 0.3.3
+
   minitest:
     github: ysbaddaden/minitest.cr
     version: 0.3.5
+
+  radix:
+    github: luislavena/radix
+    version: 0.3.8
 
