@@ -10,6 +10,11 @@ version: 0.1.0
 dependencies:
   minitest:
     github: ysbaddaden/minitest.cr
+  crystalla:
+    github: mverzilli/crystalla
+  kemal:
+    github: kemalcr/kemal
+    branch: master
 #   pg:
 #     github: will/crystal-pg
 #     version: "~> 0.5"
